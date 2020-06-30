@@ -1,0 +1,66 @@
+/* https://giphy.com/gifs/design-motion-dribbble-l3V0Aw62aN7EBhib6/fullscreen */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: rgb(255, 102, 153);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./giphy.gif");
+  background-size: contain;
+  background-position: 15% center;
+  background-repeat: no-repeat;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 200px;
+  height: 50px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background: rgb(188, 83, 83);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  filter: brightness(95%);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+
+/* Media Query: Tablet or smaller */
+
+@media screen and (max-width: 1000px) {
+  .container {
+    background-position: center center;
+    background-size: cover;
+    justify-content: unset;
+  }
+
+  button {
+    box-shadow: 5px 5px 20px 10px rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 100px;
+  }
+}
